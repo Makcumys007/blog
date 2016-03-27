@@ -1,6 +1,6 @@
 package com.mycompany.blog.action;
 
-import com.mycompany.blog.doa.ArticleDAO;
+import com.mycompany.blog.dao.ArticleDAO;
 import com.mycompany.blog.entity.Article;
 
 import javax.servlet.http.HttpServletRequest;
@@ -8,14 +8,14 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
 public class ArticlesAction implements Action {
-    ActionResult result = new ActionResult("index");
+    ActionResult index = new ActionResult("index");
     @Override
     public ActionResult execute(HttpServletRequest req, HttpServletResponse resp) {
 
         ArticleDAO dao = new ArticleDAO();
-        List<Article> all = dao.getAll();
-        req.getSession().setAttribute("articles", all);
+        List<Article> articles = dao.getAll();
+        req.setAttribute("articles", articles);
 
-        return result;
+        return index;
     }
 }

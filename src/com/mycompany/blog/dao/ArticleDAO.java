@@ -1,4 +1,4 @@
-package com.mycompany.blog.doa;
+package com.mycompany.blog.dao;
 
 import com.mycompany.blog.entity.Article;
 
