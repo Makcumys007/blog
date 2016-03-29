@@ -9,8 +9,8 @@ public class ActionFactory {
 
     public ActionFactory() {
         actions = new HashMap<>();
-        actions.put("GET/", new ArticlesAction("home"));
-
+        actions.put("GET/", new HomeAction("home"));
+        actions.put("GET/display", new PostAction("post"));
     }
 
     public Action getAction(HttpServletRequest req) {

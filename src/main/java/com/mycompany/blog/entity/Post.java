@@ -1,6 +1,6 @@
 package com.mycompany.blog.entity;
 
-public class Article extends BaseEntity {
+public class Post extends BaseEntity {
     private String title;
     private String description;
     private String text;
@@ -40,7 +40,7 @@ public class Article extends BaseEntity {
 
     @Override
     public String toString() {
-        return "Article{" +
+        return "Post{" +
                 "title='" + title + '\'' +
                 ", description='" + description + '\'' +
                 ", text='" + text + '\'' +

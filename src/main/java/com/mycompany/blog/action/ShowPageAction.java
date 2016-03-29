@@ -5,14 +5,14 @@ import javax.servlet.http.HttpServletResponse;
 
 public class ShowPageAction implements Action {
 
-    private ActionResult result;
+    private ActionResult resultPage;
 
     public ShowPageAction(String page) {
-        result = new ActionResult(page);
+        resultPage = new ActionResult(page);
     }
 
     @Override
     public ActionResult execute(HttpServletRequest req, HttpServletResponse resp) {
-        return result;
+        return resultPage;
     }
 }
