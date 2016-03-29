@@ -14,7 +14,7 @@
     <div id="post">
         <h3>${post.title}</h3>
         <p>${post.description}</p>
-        <h6>Автор: ${post.author} <span><a href="${pageContext.request.contextPath}/do/display?id=${post.id}">читать далее...</a></span></h6>
+        <h6>Автор: ${post.author} <span><a href="${pageContext.request.contextPath}/do/post?id=${post.id}">читать далее...</a></span></h6>
     </div>
 </c:forEach>
 

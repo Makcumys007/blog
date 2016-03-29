@@ -10,7 +10,7 @@ public class ActionFactory {
     public ActionFactory() {
         actions = new HashMap<>();
         actions.put("GET/", new HomeAction("home"));
-        actions.put("GET/display", new PostAction("post"));
+        actions.put("GET/post", new PostAction("post"));
     }
 
     public Action getAction(HttpServletRequest req) {
