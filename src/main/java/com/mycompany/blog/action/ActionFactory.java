@@ -9,11 +9,13 @@ public class ActionFactory {
 
     public ActionFactory() {
         actions = new HashMap<>();
-        actions.put("GET/", new ArticlesAction());
+        actions.put("GET/", new ArticlesAction("home"));
+
     }
 
     public Action getAction(HttpServletRequest req) {
         String key = req.getMethod() + req.getPathInfo();
+        System.out.println(key);
         return actions.get(key);
     }
 }
