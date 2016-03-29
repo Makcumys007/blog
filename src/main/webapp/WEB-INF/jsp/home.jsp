@@ -7,5 +7,11 @@
 Hello!!!
 
 
+
+<c:forEach var="post" items="${articles}">
+    <c:out value="${post.getId()}"/>
+
+</c:forEach>
+
 </body>
 </html>

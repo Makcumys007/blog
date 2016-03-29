@@ -1,9 +1,7 @@
 package com.mycompany.blog.action;
 
-import com.mycompany.blog.dao.AbstractDAO;
 import com.mycompany.blog.dao.ArticleDAO;
 import com.mycompany.blog.entity.Article;
-
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.List;
@@ -19,7 +17,7 @@ public class ArticlesAction implements Action {
     public ActionResult execute(HttpServletRequest req, HttpServletResponse resp) {
         ArticleDAO articleDAO = new ArticleDAO();
         List<Article> articles = articleDAO.getAll();
-        req.setAttribute("home", articles);
+        req.setAttribute("articles", articles);
 
         return home;
     }
